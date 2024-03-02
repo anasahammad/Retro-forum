@@ -20,12 +20,40 @@
     .font-mulish{
         font-family: "Mulish", sans-serif;
     }
-    
+
 </style>
 </head>
 <body>
     <!-- Header Start -->
-    <header></header>
+    <header class="container mx-auto my-5">
+
+        <!-- navbar start -->
+
+        <div>
+            <div class="navbar bg-base-100">
+                <div class="flex-1">
+                 <img src="images/logo.png" alt="">
+                </div>
+                <div class="flex justify-between items-center gap-4 ">
+                  <div class="rounded-full border p-3 cursor-pointer hidden tooltip  tooltip-top lg:block" data-tip="Home">
+                    <img src="images/Home.svg" alt="">
+                  </div>
+                  <div class="rounded-full border p-3 cursor-pointer tooltip  tooltip-top hidden lg:block" data-tip="Tooltip">
+                    <img src="images/toolpen.svg" alt="">
+                  </div> 
+                  <div class="rounded-full border p-3 cursor-pointer tooltip  tooltip-top hidden lg:block" data-tip="People">
+                    <img src="images/people+.svg" alt="">
+                  </div>
+                  <div class="rounded-full border p-3 cursor-pointer tooltip  tooltip-top hidden lg:block" data-tip="Flag">
+                    <img src="images/flag.svg" alt="">
+                  </div>
+                  <div>
+                    <button class=" btn rounded-full rounded bg-[#797DFC] font-mulish font-bold text-white ">Sign In</button>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </header>
 
      <!-- Header End -->
 
