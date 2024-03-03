@@ -5,10 +5,11 @@ const latestPostContainer = document.getElementById('latest-post-container');
 
 let readCount = 0;
 
-const allPosts = async () =>{
-    const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
+const allPosts = async (searchText) =>{
+    const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchText}`);
     const data = await res.json();
     const posts = data.posts;
+    allPostContainer.innerText = '';
     posts.forEach((post) =>{
         // console.log(post)
 
@@ -140,7 +141,18 @@ const latestPost = async ()=>{
 }
 
 
-latestPost()
+const handleSearch = ()=>{
+    // loadingSpinner(true);
+    const inputField = document.getElementById('input-field');
+    const searchText = inputField.value;
+   
+    allPosts(searchText);
+ 
+   
+    
+}
+
+latestPost();
 
 
-allPosts()
+allPosts("comedy");
