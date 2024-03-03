@@ -57,7 +57,7 @@ const allPosts = async (searchCatagory) =>{
                                             </div>
                                         </div>
             
-                                        <button onclick="markRead('${post.title}', '${post.view_count}')" id="mark-read">
+                                        <button onclick="markRead('${post?.title.replace(/'/g, "")}', '${post.view_count}')" id="mark-read">
                                             <img src="images/email 1.svg" alt="">
                                         </button>
                                     </div>
