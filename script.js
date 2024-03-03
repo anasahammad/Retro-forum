@@ -172,4 +172,4 @@ const loadingSpinner = (isLoading) =>{
 latestPost();
 
 
-allPosts("comedy");
+allPosts(searchCatagory ='');
