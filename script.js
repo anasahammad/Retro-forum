@@ -12,7 +12,7 @@ const allPosts = async (searchCatagory) =>{
     allPostContainer.innerText = '';
     posts.forEach((post) =>{
         // console.log(post)
-
+       
         const div = document.createElement('div');
         div.className = 'bg-[#797dfc1a] rounded-3xl p-6 my-6';
         div.innerHTML = `
@@ -22,7 +22,7 @@ const allPosts = async (searchCatagory) =>{
                                 <div class=" relative">
                                     <img src="${post.image}"  class="rounded-2xl w-[72px] h-[72px]"/>
 
-                                    <div class="absolute w-3 h-3 bg-green-500 rounded-full left-[62px]  lg:left-[55px]  top-0"></div>
+                                    <div id="" class="absolute w-3 h-3 bg-green-500 rounded-full left-[62px]  lg:left-[55px]  top-0"></div>
                                   </div>
                                   
 
@@ -73,8 +73,7 @@ const allPosts = async (searchCatagory) =>{
         
     })
 
-    
-   
+    loadingSpinner(false);
 
     
 }
@@ -94,6 +93,7 @@ const markRead = (title, view)=>{
     
 `
 readCounteContainer.appendChild(div) 
+
 }
 
 
@@ -114,7 +114,7 @@ const latestPost = async ()=>{
             
             <div class="flex gap-1">
                 <img src="images/frame-box.svg" alt="">
-                <p>29 January 2024</p>
+                <p>${post.author?.posted_date || "No Publish Date"}</p>
             </div>
           <p class="text-[#12132D] font-extrabold text-[18px]">${post.title}</p>
 
@@ -126,7 +126,7 @@ const latestPost = async ()=>{
             </div>
             <div>
                 <div><p>${post.author.name}</p></div>
-                <div> <p>Unknown</p></div>
+                <div> <p>${post.author?.designation || "Unknown"}</p></div>
             </div>
                
           </div>
@@ -135,21 +135,35 @@ const latestPost = async ()=>{
       </div>
         
         `
-        latestPostContainer.appendChild(div)
+        latestPostContainer.appendChild(div);
+       
 
     })
 }
 
 
 const handleSearch = ()=>{
-    // loadingSpinner(true);
-    const inputField = document.getElementById('input-field');
-    const searchCatagory = inputField.value;
-   
-    allPosts(searchCatagory);
+    loadingSpinner(true)
  
    
+    const inputField = document.getElementById('input-field');
+    const searchCatagory = inputField.value;
+        setTimeout(()=>{
+            allPosts(searchCatagory);
+        }, 2000)
     
+    
+}
+
+const loadingSpinner = (isLoading) =>{
+    const spinner = document.getElementById('spineer');
+    if(isLoading){
+        
+        spinner.classList.remove('hidden')
+    }
+    else{
+        spinner.classList.add('hidden')
+    }
 }
 
 latestPost();
