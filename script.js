@@ -13,6 +13,7 @@ const allPosts = async (searchCatagory) =>{
     posts.forEach((post) =>{
         // console.log(post)
        
+        
         const div = document.createElement('div');
         div.className = 'bg-[#797dfc1a] rounded-3xl p-6 my-6';
         div.innerHTML = `
@@ -22,7 +23,7 @@ const allPosts = async (searchCatagory) =>{
                                 <div class=" relative">
                                     <img src="${post.image}"  class="rounded-2xl w-[72px] h-[72px]"/>
 
-                                    <div id="" class="absolute w-3 h-3 bg-green-500 rounded-full left-[62px]  lg:left-[55px]  top-0"></div>
+                                    <div id="dot" class="absolute w-3 h-3 ${post.isActive?"bg-green-600" : "bg-red-600"}  rounded-full left-[62px]  lg:left-[60px]  top-0"></div>
                                   </div>
                                   
 
@@ -67,9 +68,11 @@ const allPosts = async (searchCatagory) =>{
                         </div>
         
         `
-
         
+       
         allPostContainer.appendChild(div)
+        
+      
         
     })
 
