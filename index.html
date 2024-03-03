@@ -38,10 +38,10 @@
                   <div class="rounded-full border p-3 cursor-pointer hidden tooltip  tooltip-top lg:block" data-tip="Home">
                     <img src="images/Home.svg" alt="">
                   </div>
-                  <div class="rounded-full border p-3 cursor-pointer tooltip  tooltip-top hidden lg:block" data-tip="Tooltip">
+                  <div class="rounded-full border p-3 cursor-pointer tooltip  tooltip-top hidden lg:block" data-tip="Edit">
                     <img src="images/toolpen.svg" alt="">
                   </div> 
-                  <div class="rounded-full border p-3 cursor-pointer tooltip  tooltip-top hidden lg:block" data-tip="People">
+                  <div class="rounded-full border p-3 cursor-pointer tooltip  tooltip-top hidden lg:block" data-tip="Add">
                     <img src="images/people+.svg" alt="">
                   </div>
                   <div class="rounded-full border p-3 cursor-pointer tooltip  tooltip-top hidden lg:block" data-tip="Flag">
@@ -122,9 +122,9 @@
                 <!-- Card Section -->
             <div class="flex flex-col lg:flex-row justify-between ">
                 <!-- Left Side -->
-                <div class=" lg:w-[790px] ">
-                    <div class=" bg-[#797dfc1a] rounded-3xl p-6 my-6 ">
-                        <div class="flex flex-col gap-4 lg:flex-row">
+                <div id="all-posts-container" class=" lg:w-[790px] ">
+                    <div>
+                        <!-- <div class="flex flex-col gap-4 lg:flex-row">
                             <div class="flex flex-col lg:flex-row gap-6">
                                
                                 <div class=" relative">
@@ -173,7 +173,7 @@
 
                                   </div>    
                             </div>
-                        </div>
+                        </div> -->
                       </div>
                     <!-- <div class=" bg-[#797dfc1a] rounded-3xl p-6 my-6">
                         <div class="flex flex-col gap-4 lg:flex-row">
@@ -230,7 +230,7 @@
 
                 <!-- Right Side -->
 
-                <div class="bg-[#12132d0d] p-6 rounded-3xl lg:w-[374px] ">
+                <div class="bg-[#12132d0d] p-6 rounded-3xl lg:w-[374px] lg:h-[465px]">
                     <div class="flex justify-between">
                         <div>
                             <h5 class="text-[#12132D] font-mulish font-semibold text-[20px]">Title</h5>
@@ -238,37 +238,21 @@
                       
                         <div class="flex items-center gap-2">
                             <img src="images/mark.svg" alt="">
-                            <p class="text-[#12132d99]">Mark as read (4)</p>
+                            <p class="text-[#12132d99]">Mark as read <span id="read-count">(0)</span> </p>
                         </div>
                     </div>
 
 
-                    <div class="bg-white flex p-4 rounded-2xl justify-between my-4">
-                        <div>
+                    <div id="read-count-container">
+                        
+                    <div >
+                        <!-- <div>
                             <h5 class="text-[#12132D] font-medium font-mulish">10 Kids Unaware of Their Halloween Costume</h5>
                         </div>
                         <div class="flex justify-center items-center gap-1">
                             <img src="images/tabler-icon-eye.svg" alt="">
                             <p>1,568</p>
-                        </div>
-                    </div>
-                    <div class="bg-white flex p-4 rounded-2xl justify-between my-4">
-                        <div>
-                            <h5 class="text-[#12132D] font-medium font-mulish">10 Kids Unaware of Their Halloween Costume</h5>
-                        </div>
-                        <div class="flex justify-center items-center gap-1">
-                            <img src="images/tabler-icon-eye.svg" alt="">
-                            <p>1,568</p>
-                        </div>
-                    </div>
-                    <div class="bg-white flex p-4 rounded-2xl justify-between my-4">
-                        <div>
-                            <h5 class="text-[#12132D] font-medium font-mulish">10 Kids Unaware of Their Halloween Costume</h5>
-                        </div>
-                        <div class="flex justify-center items-center gap-1">
-                            <img src="images/tabler-icon-eye.svg" alt="">
-                            <p>1,568</p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
