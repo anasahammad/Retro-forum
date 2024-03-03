@@ -1,6 +1,7 @@
 const allPostContainer = document.getElementById('all-posts-container');
 const readCounter = document.getElementById('read-count');
 const readCounteContainer = document.getElementById('read-count-container');
+const latestPostContainer = document.getElementById('latest-post-container');
 
 let readCount = 0;
 
@@ -93,6 +94,53 @@ const markRead = (title, view)=>{
 `
 readCounteContainer.appendChild(div) 
 }
+
+
+const latestPost = async ()=>{
+    const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts');
+    const data = await res.json();
+    // console.log(data);
+
+
+    data.forEach((post)=>{
+        const div = document.createElement('div');
+        div.innerHTML = `
+        <div class="card w-96 bg-base-100 shadow-xl ">
+        <figure class="px-10 pt-10">
+          <img src="${post.cover_image}" alt="Shoes" class="rounded-xl" />
+        </figure>
+        <div class="card-body  text-left">
+            
+            <div class="flex gap-1">
+                <img src="images/frame-box.svg" alt="">
+                <p>29 January 2024</p>
+            </div>
+          <p class="text-[#12132D] font-extrabold text-[18px]">${post.title}</p>
+
+          <p>${post.description} </p>
+
+          <div class="flex gap-4 items-center">
+            <div>
+                <img src="${post.profile_image}" class="w-[44px] h-[44px] rounded-full" />
+            </div>
+            <div>
+                <div><p>${post.author.name}</p></div>
+                <div> <p>Unknown</p></div>
+            </div>
+               
+          </div>
+          
+        </div>
+      </div>
+        
+        `
+        latestPostContainer.appendChild(div)
+
+    })
+}
+
+
+latestPost()
 
 
 allPosts()
