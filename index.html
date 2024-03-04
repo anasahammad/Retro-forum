@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReTro</title>
+    <title>Vintage</title>
 
     <!-- Daisy Ui and Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -31,25 +31,56 @@
 
         <div>
             <div class="navbar bg-base-100">
-                <div class="flex-1">
-                 <img src="images/logo.png" alt="">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-5 shadow bg-base-100 rounded-box w-32">
+    
+                      <li><a href=""><div class="rounded-full border p-3 cursor-pointer  tooltip  tooltip-top lg:block" data-tip="Home">
+                        <img src="images/Home.svg" alt="">
+                      </div></a></li>
+    
+    
+                      <li>
+                        <a><div class="rounded-full border p-3 cursor-pointer tooltip  tooltip-top  lg:block" data-tip="Edit">
+                            <img src="images/toolpen.svg" alt="">
+                          </div></a>
+                      </li>
+    
+    
+    
+                      <li><a> <div class="rounded-full border p-3 cursor-pointer tooltip  tooltip-top  lg:block" data-tip="Add">
+                        <img src="images/people+.svg" alt="">
+                      </div></a></li>
+    
+                      <li><a href=""> <div class="rounded-full border p-3 cursor-pointer tooltip  tooltip-top  lg:block" data-tip="Flag">
+                        <img src="images/flag.svg" alt="">
+                      </div></a></li>
+                    </ul>
+                  </div>
+                  <a class="btn btn-ghost text-[36px] text-[#12132D]font-black font-mulish">VinTage</a>
                 </div>
-                <div class="flex justify-between items-center gap-4 ">
-                  <div class="rounded-full border p-3 cursor-pointer hidden tooltip  tooltip-top lg:block" data-tip="Home">
-                    <img src="images/Home.svg" alt="">
-                  </div>
-                  <div class="rounded-full border p-3 cursor-pointer tooltip  tooltip-top hidden lg:block" data-tip="Edit">
-                    <img src="images/toolpen.svg" alt="">
-                  </div> 
-                  <div class="rounded-full border p-3 cursor-pointer tooltip  tooltip-top hidden lg:block" data-tip="Add">
-                    <img src="images/people+.svg" alt="">
-                  </div>
-                  <div class="rounded-full border p-3 cursor-pointer tooltip  tooltip-top hidden lg:block" data-tip="Flag">
-                    <img src="images/flag.svg" alt="">
-                  </div>
-                  <div>
+                
+                <div class="navbar-end flex items-center gap-2">
+                    <div class="flex justify-between items-center gap-4">
+    
+                   
+                    <div class="rounded-full border p-3 cursor-pointer hidden tooltip  tooltip-top lg:block" data-tip="Home">
+                        <img src="images/Home.svg" alt="">
+                      </div>
+                      <div class="rounded-full border p-3 cursor-pointer tooltip  tooltip-top hidden lg:block" data-tip="Edit">
+                        <img src="images/toolpen.svg" alt="">
+                      </div> 
+                      <div class="rounded-full border p-3 cursor-pointer tooltip  tooltip-top hidden lg:block" data-tip="Add">
+                        <img src="images/people+.svg" alt="">
+                      </div>
+                      <div class="rounded-full border p-3 cursor-pointer tooltip  tooltip-top hidden lg:block" data-tip="Flag">
+                        <img src="images/flag.svg" alt="">
+                      </div>
+                    </div>
                     <button class=" btn rounded-full rounded bg-[#797DFC] font-mulish font-bold text-white ">Sign In</button>
-                  </div>
                 </div>
               </div>
         </div>
@@ -66,9 +97,9 @@
                 
                     <div class="hero-content text-center lg:text-left text-neutral-content">
                         <div class="max-w-md">
-                          <h1 class="mb-5  font-bold font-mulish font-black text-[32px] lg:text-[64px] text-white  lg:w-[633px]">Welcome to the <span class="text-[#797DFC]">ReTro</span> Forum</h1>
+                          <h1 class="mb-5  font-bold font-mulish font-black text-[32px] lg:text-[64px] text-white  lg:w-[633px]">Welcome to the <span class="text-[#797DFC]">Vintage</span> Forum</h1>
                           <p class="mb-5 lg:text-xl font-mulish text-[#ffffffcc
-                          ]">Step into a time capsule of nostalgia! Welcome to Retro Forum, where vintage vibes and vibrant discussions await.</p>
+                          ]">Step into a time capsule of nostalgia! Welcome to Vintage Forum, where vintage vibes and vibrant discussions await.</p>
       
                           <label class="input input-bordered flex rounded-full items-center gap-2">
                               <input id="input-field" type="text" class="grow" placeholder="Search here anything" />
@@ -365,9 +396,9 @@
       <!-- Footer Start -->
       <footer class="footer footer-center p-10 bg-gray-50 text-primary-content">
         <aside>
-         <img src="images/logo.png" alt="">
+            <a class="btn btn-ghost text-[36px] text-[#12132D] font-black font-mulish">VinTage</a>
           <p class="font-bold text-[#12132db3]">
-            A forum where the past meets the present. Join the conversation, leave a mark in the retro tapestry.
+            A forum where the past meets the present. Join the conversation, leave a mark in the vintage tapestry.
 
           </p> 
           
