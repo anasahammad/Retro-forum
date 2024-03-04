@@ -2,6 +2,7 @@ const allPostContainer = document.getElementById('all-posts-container');
 const readCounter = document.getElementById('read-count');
 const readCounteContainer = document.getElementById('read-count-container');
 const latestPostContainer = document.getElementById('latest-post-container');
+const errorElement = document.getElementById('error-element');
 
 let readCount = 0;
 
@@ -10,6 +11,13 @@ const allPosts = async (searchCatagory) =>{
     const data = await res.json();
     const posts = data.posts;
     allPostContainer.innerText = '';
+
+
+    if(posts.length === 0){
+        errorElement.classList.remove('hidden');
+    } else{
+        errorElement.classList.add("hidden");
+    }
     posts.forEach((post) =>{
         // console.log(post)
        
@@ -151,11 +159,17 @@ const handleSearch = ()=>{
    
     const inputField = document.getElementById('input-field');
     const searchCatagory = inputField.value;
+        
+    if(searchCatagory === ''){
+        alert("Please Input a catagory");
+        loadingSpinner(false)
+    }
         setTimeout(()=>{
             allPosts(searchCatagory);
         }, 2000)
     
-    
+     
+  
 }
 
 const loadingSpinner = (isLoading) =>{
@@ -170,6 +184,5 @@ const loadingSpinner = (isLoading) =>{
 }
 
 latestPost();
-
 
 allPosts(searchCatagory ='');
